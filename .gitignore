@@ -1,0 +1,11 @@
+/node_modules/
+/src/Context
+/src/Hooks
+/src/Data
+/src/Utils
+/src/Services
+/public/
+eslint.config.js
+package-lock.json
+package.json
+vite.config.js
