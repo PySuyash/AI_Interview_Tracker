@@ -1,0 +1,174 @@
+.MIPageWrapper {
+    --primary-color: #0b192c;
+    --secondary-color: rgba(13, 54, 75, 0.95);
+    --third-color: rgba(255, 255, 255, 0.08);
+    --text-color-primary: #f8fafc;
+    --text-color-secondary: #94a3b8;
+    --text-color-third: rgb(170, 250, 49);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --component-background-color: #122949;
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.MIPH {
+    height: auto;
+    min-height: 60px;
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.mainHeadingMI, .stopBTN {
+    height: 100%;
+    width: 100%;
+    padding: clamp(0.5rem, 1vw, 2rem);
+    gap: 7px;
+}
+
+.mainHeadingMI {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.mainHeadingMI h2 {
+    color: var(--text-color-primary);
+    font-size: clamp(1rem, 5vw, 30px);
+}
+
+.mainHeadingMI p {
+    color: var(--text-color-secondary);
+    font-size: clamp(0.8rem, 2vw, 18px);
+}
+
+.stopBTN {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.stopInterviewButton {
+    padding: 0.6rem;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: red;
+    cursor: pointer;
+    color: var(--text-color-primary);
+    font-size: clamp(0.75rem, 2vw, 18px);
+}
+
+.submitResponse {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    max-width: 800px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(3, 75, 3);
+    color: var(--text-color-primary);
+    font-size: clamp(1rem, 1.2vw, 30px);
+    border: none;
+}
+
+@media (max-width: 800px) {
+    .submitResponse {
+        height: 50px;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}
+
+.feedbackBox {
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border-radius: 15px;
+    background-color: var(--component-background-color);
+    border: 1px solid var(--border-color);
+}
+
+.feedbackScore {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: var(--text-color-third);
+    margin-bottom: 12px;
+}
+
+.feedbackBox h4 {
+    color: var(--text-color-primary);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    margin: 16px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.feedbackBox ul {
+    margin: 0 0 8px;
+    padding-left: 20px;
+}
+
+.feedbackBox li {
+    color: var(--text-color-secondary);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.modelAnswerSummary {
+    color: var(--text-color-secondary);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.5;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+.nextQuestionBtn,
+.finishInterviewBtn {
+    width: 100%;
+    height: 45px;
+    margin-top: 16px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--text-color-primary);
+}
+
+.nextQuestionBtn {
+    background-color: rgb(3, 75, 3);
+}
+
+.finishInterviewBtn {
+    background-color: rgb(3, 75, 3);
+}
+
+@media (max-width: 800px) {
+    .feedbackBox {
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 0;
+    }
+
+    .nextQuestionBtn,
+    .finishInterviewBtn {
+        height: 50px;
+        border-radius: 0;
+    }
+}

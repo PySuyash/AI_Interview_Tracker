@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0b192c;
+    --secondary-color: rgba(13, 54, 75, 0.95);
+    --third-color: rgba(255, 255, 255, 0.08);
+    --text-color-primary: #f8fafc;
+    --text-color-secondary: #94a3b8;
+    --text-color-third: rgb(170, 250, 49);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --component-background-color: #122949;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}

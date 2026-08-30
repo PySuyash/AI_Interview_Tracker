@@ -1,0 +1,47 @@
+.summary {
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--text-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 0;
+    /* background-color: var(--secondary-color); */
+}
+
+.total, .avgScore, .completed {
+    height: auto;
+    width: 100%;
+    max-width: 260px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary h6 {
+    color: var(--text-color-primary);
+    font-size: clamp(1.1rem, 1.2vw, 26px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.summary p {
+    color: var(--text-color-secondary);
+    font-size: clamp(1rem, 1.1vw, 26px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 1010px) {
+    .summary {
+        border-radius: 0;
+        margin-top: 0;
+        max-width: 1010px;
+    }
+}

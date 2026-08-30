@@ -1,0 +1,74 @@
+.userAnswers {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+    justify-content: center;
+    padding: clamp(0.6rem, 1.2vw, 18px);
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+
+.userAnswers p {
+    text-align: center;
+    font-size: clamp(1rem, 1.3vw, 40px);
+    color: var(--text-color-primary);
+}
+
+.userAnswers input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    padding: 0 10px;
+    color: black;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1rem, 1vw, 14px);
+    background-color: rgb(189, 188, 188);
+}
+
+.userAnswers textarea {
+  /* width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical; */
+
+  position: absolute;
+  bottom: 20px;
+  outline: none;
+  font-weight: 500;
+  min-height: 200px;
+  width: 100%;
+  max-width: 780px;
+  border-radius: 12px;
+  border: none;
+  padding: 8px 13px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1rem, 1vw, 14px);
+  background-color: rgb(189, 188, 188);
+  resize: vertical;
+}
+
+@media (max-width: 800px) {
+    .userAnswers {
+        margin: 0;
+        border-radius: 0;
+        border-top: 3px solid black;
+    }
+}

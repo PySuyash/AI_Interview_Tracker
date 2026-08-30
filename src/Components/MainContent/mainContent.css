@@ -1,0 +1,146 @@
+* {
+    text-decoration: none;
+}
+
+:root {
+  --bg-card-from: rgba(29, 102, 138, 0.55);
+  --bg-card-to: rgba(13, 54, 75, 0.95);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vh, 2.5rem) 1.5rem;
+  /* Replaced rigid min-height calc with min-content safety */
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vh, 2rem);
+  box-sizing: border-box;
+}
+
+/* Header Adjustments */
+.navHeader {
+  text-align: center;
+}
+
+.navHeader h2 {
+  /* color: rgb(8, 42, 59); */
+  color: var(--primary-color);
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.navHeader p {
+  /* color: rgb(71, 69, 69); */
+  color: var(--secondary-color);
+  font-size: clamp(0.875rem, 1.2vw, 1.1rem);
+  margin-top: 0.5rem;
+}
+
+/* 
+  Fluid Grid System:
+  - Fits 1 column on small phones
+  - Fits 2 columns on Surface Pro 7 (912px) & iPad Pro (1024px portrait)
+  - Fits 4 columns on large monitors (1400px+)
+*/
+.navPages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+.navCard {
+  background: linear-gradient(135deg, var(--bg-card-from), var(--bg-card-to));
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Allow card height to adjust flexibly rather than forcing overflow */
+  min-height: 200px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.navCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(13, 54, 75, 0.9),
+              0 0 20px 2px rgba(59, 130, 246, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.iconWrapper {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.75rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.arrowIcon {
+  color: var(--text-secondary);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.navCard:hover .arrowIcon {
+  opacity: 1;
+  color: #ffffff;
+  transform: translate(3px, -3px);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardBody h3 {
+  color: var(--text-primary);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.cardBody p {
+  color: var(--text-secondary);
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Surface Pro / iPad Portrait & Landscape Breakpoint Overrides */
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+  .navPages {
+    /* Guarantees a clean 2x2 grid on all mid-to-large tablets */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .navPages {
+    /* Clean single column on mobile screens */
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,122 @@
+.NotFound {
+    --primary-color: #0b192c;
+    --secondary-color: rgba(13, 54, 75, 0.95);
+    --third-color: rgba(255, 255, 255, 0.08);
+    --text-color-primary: #f8fafc;
+    --text-color-secondary: #94a3b8;
+    --text-color-third: rgb(170, 250, 49);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --component-background-color: rgba(18, 41, 73, 0.75);
+
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Card Container */
+.error {
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 40px 24px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: var(--component-background-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+/* Transparent Background Layer */
+.error::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/Images/PageNotFound.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1; /* Sits behind text, inside .error */
+}
+
+/* Ensure all text and buttons render above the ::before pseudo-element */
+.error > * {
+    position: relative;
+    z-index: 2;
+}
+
+.error h1 {
+    color: var(--text-color-primary);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.error p {
+    color: var(--text-color-secondary);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin: 0;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.error button {
+    margin-top: 10px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 240px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color-primary);
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.error button:hover {
+    background-color: rgba(22, 84, 115, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.error button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Screen Adjustments */
+@media (max-width: 480px) {
+    .error {
+        padding: 30px 16px;
+        min-height: 280px;
+        border-radius: 14px;
+    }
+
+    .error p {
+        max-width: 95%;
+    }
+
+    .error button {
+        max-width: 100%;
+    }
+}

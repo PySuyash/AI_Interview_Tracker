@@ -1,0 +1,83 @@
+.InterviewConfiguration {
+    height: auto;
+    min-height: 200px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 6px 8px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.TechnicalInterview, .BehavioralInterview, .MixedInterview {
+    height: auto;
+    min-height: 200px;
+    width: 100%;
+    margin: 0.5rem auto;
+    max-width: 400px;
+    border-radius: 20px;
+    background-color: var(--third-color);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    padding: clamp(0.6rem, 1.2vw, 20px);
+    gap: clamp(0.5rem, 1vw, 15px);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.TechnicalInterview h4 {
+    font-size: clamp(1.1rem, 1.4vw, 30px);
+    color: var(--text-color-primary);
+}
+
+.TechnicalInterview p {
+    text-align: center;
+    font-size: clamp(0.90rem, 1.4vw, 26px);
+    color: var(--text-color-third);
+}
+
+.BehavioralInterview h4 {
+    font-size: clamp(1.1rem, 1.4vw, 30px);
+    color: var(--text-color-primary);
+}
+
+.BehavioralInterview p {
+    text-align: center;
+    font-size: clamp(0.90rem, 1.4vw, 26px);
+    color: var(--text-color-third);
+}
+
+.MixedInterview h4 {
+    font-size: clamp(1.1rem, 1.4vw, 30px);
+    color: var(--text-color-primary);
+}
+
+.MixedInterview p {
+    text-align: center;
+    font-size: clamp(0.90rem, 1.4vw, 26px);
+    color: var(--text-color-third);
+}
+
+.TechnicalInterview:hover, .BehavioralInterview:hover, .MixedInterview:hover {
+    transform: translateY(-5px);
+    transform: scale(1.02);
+    border: 1px solid white;
+}
+
+.TechnicalInterview.selected,
+.MixedInterview.selected,
+.BehavioralInterview.selected {
+    border: 2px solid white;
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.4);
+}

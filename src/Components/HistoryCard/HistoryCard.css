@@ -1,0 +1,114 @@
+.historyCard {
+    height: auto;
+    min-height: 150px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin: 5px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.historyCardHeader {
+    padding: 10px 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.part1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.part2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    color: var(--text-color-primary);
+}
+
+.completedStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 12px;
+    font-size: clamp(0.85rem, 1vw, 20px);
+    color: green;
+}
+
+.Terminated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 12px;
+    font-size: clamp(0.85rem, 1vw, 20px);
+    color: red;
+}
+
+.part1 h3 {
+    font-size: clamp(0.85rem, 1vw, 20px);
+    color: var(--text-color-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.part1 h4 {
+    font-size: clamp(0.85rem, 1vw, 20px);
+    color: var(--text-color-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.DandT {
+    height: auto;
+    width: 100%;
+    display: grid;
+    padding: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.date, .time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    color: var(--text-color-primary);
+}
+
+.time {
+    justify-content: flex-end;
+}
+
+.date p, .time p {
+    font-size: clamp(0.85rem, 1vw, 20px);
+}
+
+.SandQ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+}
+
+.SandQ p {
+    color: var(--text-color-primary);
+    font-size: clamp(0.85rem, 1vw, 20px);
+}
+
+@media (max-width: 407px) {
+    .historyCard {
+        margin-top: 0;
+    }
+}

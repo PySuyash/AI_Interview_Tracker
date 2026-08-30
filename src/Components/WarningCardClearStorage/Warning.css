@@ -1,0 +1,163 @@
+.warningWrapper {
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    border-radius: 15px;
+    border: 2px solid var(--text-color-secondary);
+}
+
+.warningCardHeader {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.warningCardHeader h5 {
+    color: rgb(231, 21, 21);
+    font-size: clamp(1.3rem, 1.5vw, 30px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.alertTriangle {
+    height: 30px;
+    color: rgb(231, 21, 21);
+}
+
+.main-content-warning-card {
+    height: auto;
+    width: 100%;
+}
+
+.sec-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 8px;
+    padding: 8px 4px;
+}
+
+.sec-1 p {
+    color: var(--text-color-secondary);
+    font-size: clamp(0.9rem, 1.2vw, 26px);
+    text-align: center;
+}
+
+.sec-2 {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px 4px;
+    border-top: 1px solid var(--text-color-secondary);
+}
+
+.sec-2 div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.whatDeleted {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.whatDeleted h5, .whatNotDeleted h5 {
+    color: var(--text-color-primary);
+    font-size: clamp(0.85rem, 1.1vw, 28px);
+}
+
+.whatNotDeleted h5 {
+    margin: 3px 0;
+}
+
+.whatDeleted p, .whatNotDeleted p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--text-color-secondary);
+}
+
+.sec-3 {
+    height: auto;
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.confirm, .cancel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
+    border-radius: 12px;
+    border: none;
+    color: var(--text-color-primary);
+    font-size: clamp(0.9rem, 1.1vw, 28px);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirm {
+    background-color: rgb(137, 9, 9);
+}
+
+.cancel {
+    background-color: rgb(3, 90, 3);
+}
+
+.confirm:hover {
+    background-color: rgb(106, 9, 9);
+}
+
+.cancel:hover {
+    background-color: rgb(3, 71, 3);
+}
+
+.clearedMessage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #16a34a;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 512px) {
+    .sec-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .whatDeleted {
+        width: 100%;
+    }
+}
