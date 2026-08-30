@@ -147,7 +147,6 @@ const MockInterview = () => {
       <UserAnswer
         userResponse={userResponse}
         setUserResponse={setUserResponse}
-        onSubmit={handleSubmitResponse}
       />
 
       {!feedback && (
