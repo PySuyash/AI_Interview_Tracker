@@ -70,10 +70,10 @@ const Footer = () => {
 
             <p>Start your next mock interview and improve your skills.</p>
 
-            <a href="/createinterview" className="footerCTAButton">
+            <Link to="/createinterview" className="footerCTAButton">
               Start Interview
               <ArrowUpRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
 
